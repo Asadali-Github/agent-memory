@@ -1,0 +1,12 @@
+# m1_chrono — MITIGATION ARM. Identical to m1 in every respect except that the
+# retrieved turns are re-sorted into chronological order before filling the
+# prompt slot (retrieval.reorder_chronologically).
+#
+# Selection, token count and read budget are unchanged, so m1 vs m1_chrono is a
+# single-factor manipulation of layout — the same contrast as b vs b_reversed,
+# applied to a score-ordered architecture. Tests whether the ordering tax
+# measured on the baseline can be removed from a retrieval memory for free.
+condition: m1_chrono
+params:
+  retriever: tfidf
+  chronological_order: true

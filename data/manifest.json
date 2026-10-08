@@ -1,0 +1,26 @@
+{
+  "dataset": "LongMemEval",
+  "source": "https://huggingface.co/datasets/xiaowu0162/longmemeval",
+  "downloaded": "2026-07-04",
+  "note": "HF marks this dataset as deprecated in favour of xiaowu0162/longmemeval-cleaned; using original release for comparability with published results. Files gitignored; verify with sha256sum against this manifest.",
+  "files": [
+    {
+      "path": "data/longmemeval_s.json",
+      "bytes": 278025796,
+      "sha256": "08d8dad4be43ee2049a22ff5674eb86725d0ce5ff434cde2627e5e8e7e117894",
+      "items": 500
+    },
+    {
+      "path": "data/longmemeval_m.json",
+      "bytes": 2745274681,
+      "sha256": "fb5413e3b077c62927daab794836991a2fcfa61ceacab57dc679fb02daaff2d9",
+      "items": 500
+    },
+    {
+      "path": "data/longmemeval_oracle.json",
+      "bytes": 15388478,
+      "sha256": "821a2034d219ab45846873dd14c14f12cfe7776e73527a483f9dac095d38620c",
+      "items": 500
+    }
+  ]
+}

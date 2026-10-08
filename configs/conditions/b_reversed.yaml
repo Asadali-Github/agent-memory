@@ -1,0 +1,24 @@
+# b_reversed — ORDERING-ONLY CONTROL ARM (not part of the registered main grid).
+#
+# WHY THIS ARM EXISTS
+# Before the P1 patch, SummaryMemory.read() returned turns newest-first and never
+# restored chronology, while NoMemory.read() did. On Mode B histories (mean ~1171
+# tokens) the old 1500-token fold threshold never fired, so M2 never summarised
+# anything: the ONLY difference between M2 and B was reverse-chronological prompt
+# ordering. The 0.744 -> 0.626 deficit originally attributed to hierarchical
+# summarisation was therefore an ordering artefact.
+#
+# Rather than discard that observation, this arm measures it deliberately.
+# b_reversed is byte-identical to b in turn SELECTION (recency-first against the
+# same capped read budget) and differs only in the ORDER those turns are laid out
+# in the prompt. Any success-rate difference between b and b_reversed is
+# attributable to prompt ordering alone.
+#
+# This also pre-empts the obvious examiner question on the corrected M2 result:
+# "how do you know M2's deficit isn't just ordering?" — because the ordering
+# effect is measured separately here and can be subtracted.
+#
+# Report as an incidental finding in Ch4 §4.6, not as a memory architecture.
+condition: b_reversed
+params:
+  chronological_order: false   # skip the chronological re-sort in NoMemory.read()

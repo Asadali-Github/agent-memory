@@ -1,0 +1,19 @@
+# Base config — model, temperature, seeds, budgets, paths.
+# No magic constants in code; everything experiment-relevant lives here.
+# provider: mock (dev, CPU laptop) | university_hpc (vLLM server) | groq | openrouter
+# NOTE: budget/model values are PILOT DEFAULTS — freeze after the W3 pilot and
+# record the frozen values in the manifest + dissertation.
+
+provider: mock
+model: ""                    # e.g. meta-llama/Llama-3.1-8B-Instruct on HPC; FIXED across conditions
+temperature: 0.0
+seeds: [1, 2, 3]
+
+budgets:
+  memory_read_tokens: 1200   # DP1 Equal-Budget — identical for every condition
+  max_steps_per_item: 200
+  gbp_cap: 30                # kill-switch (CostTracker raises BudgetExceededError)
+
+paths:
+  data: data/
+  results: results/runs/

@@ -1,0 +1,20 @@
+
+prompt-order audit — custom_ds_merged.jsonl
+
+cond               chronological   REVERSE-chronological     score-order (mixed)                <2 turns   inversion      n
+b                            219                       0                       0                       0       0.000    219
+b_reversed                       0                     219                       0                       0       1.000    219
+m1                             0                       0                     219                       0       0.367    219
+m1_chrono                     219                       0                       0                       0       0.000    219
+m2                           219                       0                       0                       0       0.000    219
+m3                             0                       0                     219                       0       0.359    219
+m3_chrono                     219                       0                       0                       0       0.000    219
+m4                             0                       0                     219                       0       0.467    219
+m4_chrono                     219                       0                       0                       0       0.000    219
+
+inversion = mean fraction of turn pairs shown out of chronological order
+  0.00 = identical layout discipline to the baseline
+  1.00 = fully reversed (the pre-patch M2 pattern, worth -11.9pp)
+
+Any condition with a non-zero inversion rate is contrasted against a
+chronological baseline, so its effect is architecture + ordering.

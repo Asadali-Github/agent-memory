@@ -1,0 +1,9 @@
+# m4_chrono — MITIGATION ARM for the decay condition. See m1_chrono.yaml.
+# Decisive for Ch5: M4's deficit (-0.054) is currently not separable from its
+# inversion rate (0.430). Holding decay fixed while restoring chronology
+# attributes the deficit to the mechanism or to the layout, and nothing else.
+condition: m4_chrono
+params:
+  retriever: tfidf
+  decay_lambda: 0.01
+  chronological_order: true

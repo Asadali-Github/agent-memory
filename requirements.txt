@@ -1,0 +1,25 @@
+# Core (everything in the pipeline runs with these)
+python-dotenv>=1.0
+pyyaml>=6.0
+requests>=2.31
+numpy>=1.26
+pandas>=2.2
+scipy>=1.13
+statsmodels>=0.14
+matplotlib>=3.8
+pytest>=8.0
+jupyter>=1.0            # submitted .ipynb
+nbformat>=5.9
+
+# Optional — better token counts (heuristic fallback built in)
+# tiktoken>=0.7
+
+# Optional — embedding retriever for M1/M4 on HPC (configs: retriever: embedding)
+# sentence-transformers>=2.7
+
+# Optional — dataset download helper (see data/README.md)
+# huggingface_hub>=0.23
+
+# Optional — code appendix PDF (scripts/build_code_appendix.py;
+# also needs a LaTeX install providing xelatex)
+# pygments>=2.17

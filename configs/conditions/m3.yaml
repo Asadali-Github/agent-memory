@@ -1,0 +1,5 @@
+# M3 — Structured semantic fact store (custom, Mem0-style update-on-conflict).
+condition: m3
+params:
+  retriever: tfidf
+  extract_every: 5               # turns per extraction batch (1 overhead call each)

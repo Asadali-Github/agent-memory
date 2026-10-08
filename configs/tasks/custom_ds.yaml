@@ -1,0 +1,8 @@
+# Custom long-horizon Project-Tracker task (Mode B) — deterministic generator.
+task: custom_ds
+n_episodes: 10
+n_steps: 120
+n_projects: 6
+n_queries: 10
+update_prob: 0.25
+distractor_prob: 0.35

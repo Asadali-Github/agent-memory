@@ -1,0 +1,5 @@
+# M4 — Retrieval + exponential recency decay (Generative-Agents formula).
+condition: m4
+params:
+  retriever: tfidf
+  decay_lambda: 0.01             # per-step decay rate; sweep in pilot if time allows

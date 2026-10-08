@@ -1,0 +1,22 @@
+# secrets — never commit
+.env
+
+# data is gitignored; commit data/manifest.json with hashes instead
+data/*
+!data/.gitkeep
+!data/manifest.json
+!data/README.md
+
+# results are large; regenerable from configs + seeds
+results/runs/*
+!results/runs/.gitkeep
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+Thumbs.db

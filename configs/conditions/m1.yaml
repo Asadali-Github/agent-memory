@@ -1,0 +1,4 @@
+# M1 — Episodic retrieval. retriever: tfidf (CPU) | embedding (HPC).
+condition: m1
+params:
+  retriever: tfidf

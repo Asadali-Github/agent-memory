@@ -1,0 +1,5 @@
+# LongMemEval _s subset (Mode A) — stratified capping by question_type (14 Jun decision).
+task: longmemeval_s
+data_file: data/longmemeval_s.json    # download per data/README.md (gitignored)
+cap: 120                              # capped subset size; stratified by question_type
+exclude_types: []                     # e.g. [abstention] if descoped later

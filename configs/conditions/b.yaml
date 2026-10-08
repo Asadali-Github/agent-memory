@@ -1,0 +1,3 @@
+# B — NoMemory baseline: recency window fitted to the shared budget.
+condition: b
+params: {}

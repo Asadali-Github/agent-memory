@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-07-28T19:52:11.895084+00:00",
+  "git_commit": "4852474",
+  "python": "3.10.12",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+  "config": {
+    "provider": "mock",
+    "model": "",
+    "temperature": 0.0,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "budgets": {
+      "memory_read_tokens": 1200,
+      "max_steps_per_item": 200,
+      "gbp_cap": 30
+    },
+    "paths": {
+      "data": "data/",
+      "results": "results/runs/"
+    },
+    "task": {
+      "task": "custom_ds",
+      "n_episodes": 10,
+      "n_steps": 120,
+      "n_projects": 6,
+      "n_queries": 10,
+      "update_prob": 0.25,
+      "distractor_prob": 0.35
+    },
+    "cli": {
+      "task": "custom_ds",
+      "condition": "m4",
+      "all_conditions": false,
+      "seed": 1,
+      "limit": null,
+      "config": "configs/base.yaml",
+      "out": "results/layout_audit/custom_ds.jsonl"
+    }
+  }
+}

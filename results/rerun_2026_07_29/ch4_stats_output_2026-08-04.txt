@@ -1,0 +1,169 @@
+Loaded Mode B: 1971 records; Mode A: 1800 records
+
+=== 1. Mode B headline (n per arm, success [cluster-boot CI], recall, answering tokens, latency p50/p95) ===
+  b            n=219 succ=0.7443 [0.685,0.804] recall=0.767 tok=1124 lat50=700 lat95=887
+  m1           n=219 succ=0.8356 [0.784,0.884] recall=1.000 tok=1126 lat50=705 lat95=781
+  m2           n=219 succ=0.9132 [0.871,0.952] recall=1.000 tok=991 lat50=620 lat95=716
+  m3           n=219 succ=0.7534 [0.705,0.803] recall=1.000 tok=617 lat50=863 lat95=1644
+  m4           n=219 succ=0.7397 [0.682,0.798] recall=1.000 tok=1126 lat50=703 lat95=993
+  b_reversed   n=219 succ=0.6256 [0.555,0.694] recall=0.767 tok=1124 lat50=701 lat95=922
+  m1_chrono    n=219 succ=0.9726 [0.948,0.995] recall=1.000 tok=1126 lat50=698 lat95=782
+  m3_chrono    n=219 succ=0.7397 [0.684,0.789] recall=1.000 tok=617 lat50=867 lat95=1644
+  m4_chrono    n=219 succ=0.9726 [0.948,0.991] recall=1.000 tok=1126 lat50=699 lat95=784
+
+=== 1b. Mode A headline (recall: undefined on abstention items, conservatively counted 0; n_recall = defined records) ===
+  b    n=360 succ=0.0389 [0.016,0.068] recall0=0.027 (defined-only mean=0.028 on 350) tok=1253 lat50=1106
+  m1   n=360 succ=0.4083 [0.345,0.476] recall0=0.728 (defined-only mean=0.749 on 350) tok=1251 lat50=1958
+  m2   n=360 succ=0.0417 [0.019,0.070] recall0=0.972 (defined-only mean=1.000 on 350) tok=1025 lat50=927
+  m3   n=360 succ=0.2167 [0.164,0.272] recall0=0.720 (defined-only mean=0.741 on 350) tok=1196 lat50=5618
+  m4   n=360 succ=0.2361 [0.182,0.294] recall0=0.263 (defined-only mean=0.271 on 350) tok=1251 lat50=2665
+
+=== 2. Registered confirmatory family: exact McNemar, Holm over 15 ===
+  A m1 vs b                n=360 disc=139/6 RD=+0.369 [+0.303,+0.437] OR=23.17 p=5.444e-34 p_Holm=8.166e-33
+  A m4 vs b                n=360 disc=71/0 RD=+0.197 [+0.146,+0.251] OR=inf p=8.470e-22 p_Holm=1.186e-20
+  A m3 vs b                n=360 disc=70/6 RD=+0.178 [+0.121,+0.236] OR=11.67 p=6.312e-15 p_Holm=8.205e-14
+  A m2 vs b                n=360 disc=4/3 RD=+0.003 [-0.014,+0.018] OR=1.33 p=1.000e+00 p_Holm=1.000e+00
+  B m4_chrono vs m4        n=219 disc=53/2 RD=+0.233 [+0.168,+0.298] OR=26.50 p=8.554e-14 p_Holm=1.027e-12
+  B m1_chrono vs b         n=219 disc=53/3 RD=+0.228 [+0.172,+0.289] OR=17.67 p=8.137e-13 p_Holm=8.951e-12
+  B m4_chrono vs b         n=219 disc=53/3 RD=+0.228 [+0.170,+0.288] OR=17.67 p=8.137e-13 p_Holm=8.951e-12
+  B m1_chrono vs m1        n=219 disc=32/2 RD=+0.137 [+0.089,+0.190] OR=16.00 p=6.938e-08 p_Holm=6.245e-07
+  B b_reversed vs b        n=219 disc=2/28 RD=-0.119 [-0.169,-0.072] OR=0.07 p=8.680e-07 p_Holm=6.944e-06
+  B m2 vs b                n=219 disc=52/15 RD=+0.169 [+0.097,+0.245] OR=3.47 p=6.459e-06 p_Holm=4.521e-05
+  B m1 vs b                n=219 disc=51/31 RD=+0.091 [+0.019,+0.170] OR=1.65 p=3.524e-02 p_Holm=2.114e-01
+  B m3_chrono vs m3        n=219 disc=8/11 RD=-0.014 [-0.046,+0.018] OR=0.73 p=6.476e-01 p_Holm=1.000e+00
+  B m3 vs b                n=219 disc=45/43 RD=+0.009 [-0.071,+0.085] OR=1.05 p=9.152e-01 p_Holm=1.000e+00
+  B m3_chrono vs b         n=219 disc=42/43 RD=-0.005 [-0.089,+0.075] OR=0.98 p=1.000e+00 p_Holm=1.000e+00
+  B m4 vs b                n=219 disc=48/49 RD=-0.005 [-0.084,+0.083] OR=0.98 p=1.000e+00 p_Holm=1.000e+00
+  significant after Holm: 9/15
+
+=== 3. Wilcoxon signed-rank (continuous metrics only), Holm within metric ===
+  Mode B total_tokens  m1 vs b            n=219 meddiff=+0.0 meandiff=+0.6 p=4.130e-02 p_Holm=1.239e-01
+  Mode B total_tokens  m2 vs b            n=219 meddiff=-80.0 meandiff=+180.2 p=3.980e-01 p_Holm=3.980e-01
+  Mode B total_tokens  m3 vs b            n=219 meddiff=-311.0 meandiff=+61.7 p=2.125e-08 p_Holm=1.685e-07
+  Mode B total_tokens  m4 vs b            n=219 meddiff=+0.0 meandiff=+1.9 p=7.003e-05 p_Holm=4.202e-04
+  Mode B total_tokens  b_reversed vs b    n=219 meddiff=+0.0 meandiff=+0.8 p=2.805e-02 p_Holm=1.122e-01
+  Mode B total_tokens  m1_chrono vs b     n=219 meddiff=+0.0 meandiff=+0.5 p=4.612e-02 p_Holm=1.239e-01
+  Mode B total_tokens  m3_chrono vs b     n=219 meddiff=-311.0 meandiff=+61.4 p=2.106e-08 p_Holm=1.685e-07
+  Mode B total_tokens  m4_chrono vs b     n=219 meddiff=+0.0 meandiff=+0.8 p=6.496e-03 p_Holm=3.248e-02
+  Mode B latency_ms    m1 vs b            n=219 meddiff=+13.3 meandiff=-23.7 p=2.503e-05 p_Holm=5.005e-05
+  Mode B latency_ms    m2 vs b            n=219 meddiff=-64.4 meandiff=-123.1 p=4.910e-34 p_Holm=3.928e-33
+  Mode B latency_ms    m3 vs b            n=219 meddiff=+148.0 meandiff=+203.0 p=3.298e-17 p_Holm=1.979e-16
+  Mode B latency_ms    m4 vs b            n=219 meddiff=+16.6 meandiff=-12.2 p=4.209e-09 p_Holm=2.104e-08
+  Mode B latency_ms    b_reversed vs b    n=219 meddiff=+1.0 meandiff=-14.9 p=2.766e-02 p_Holm=2.766e-02
+  Mode B latency_ms    m1_chrono vs b     n=219 meddiff=+9.7 meandiff=-40.9 p=9.319e-06 p_Holm=2.796e-05
+  Mode B latency_ms    m3_chrono vs b     n=219 meddiff=+157.9 meandiff=+209.6 p=5.415e-18 p_Holm=3.790e-17
+  Mode B latency_ms    m4_chrono vs b     n=219 meddiff=+10.8 meandiff=-37.3 p=1.103e-06 p_Holm=4.411e-06
+  Mode A total_tokens  m1 vs b            n=121 meddiff=-5.0 meandiff=-4.8 p=9.586e-02 p_Holm=9.586e-02
+  Mode A total_tokens  m2 vs b            n=121 meddiff=+314155.0 meandiff=+314022.1 p=1.350e-21 p_Holm=5.399e-21
+  Mode A total_tokens  m3 vs b            n=121 meddiff=+162424.0 meandiff=+162115.7 p=1.350e-21 p_Holm=5.399e-21
+  Mode A total_tokens  m4 vs b            n=121 meddiff=-3.0 meandiff=-8.6 p=4.296e-03 p_Holm=8.593e-03
+  Mode A latency_ms    m1 vs b            n=360 meddiff=+828.7 meandiff=+858.9 p=2.203e-53 p_Holm=4.406e-53
+  Mode A latency_ms    m2 vs b            n=360 meddiff=-172.5 meandiff=-280.6 p=5.363e-30 p_Holm=5.363e-30
+  Mode A latency_ms    m3 vs b            n=360 meddiff=+4353.0 meandiff=+5051.7 p=2.539e-59 p_Holm=1.016e-58
+  Mode A latency_ms    m4 vs b            n=360 meddiff=+1489.0 meandiff=+1697.7 p=1.288e-56 p_Holm=3.865e-56
+
+=== 4. Mode B depth sensitivity (min evidence_distance in panel = 20) ===
+  d>= 20  b=0.744(n=219)  m1=0.836(n=219)  m2=0.913(n=219)  m4=0.740(n=219)  m1_chrono=0.973(n=219)  m4_chrono=0.973(n=219)
+      b_reversed vs b: RD=-0.119 disc=2/28 p=8.68e-07
+      m1_chrono vs b: RD=+0.228 disc=53/3 p=8.14e-13
+      m1_chrono vs m1: RD=+0.137 disc=32/2 p=6.94e-08
+      m1 vs b: RD=+0.091 disc=51/31 p=3.52e-02
+      m4_chrono vs m4: RD=+0.233 disc=53/2 p=8.55e-14
+  d>= 40  b=0.715(n=186)  m1=0.903(n=186)  m2=0.935(n=186)  m4=0.817(n=186)  m1_chrono=0.989(n=186)  m4_chrono=0.989(n=186)
+      b_reversed vs b: RD=-0.059 disc=2/13 p=7.39e-03
+      m1_chrono vs b: RD=+0.274 disc=52/1 p=1.20e-14
+      m1_chrono vs m1: RD=+0.086 disc=17/1 p=1.45e-04
+      m1 vs b: RD=+0.188 disc=51/16 p=2.17e-05
+      m4_chrono vs m4: RD=+0.172 disc=33/1 p=4.07e-09
+  d>= 60  b=0.681(n=160)  m1=0.950(n=160)  m2=0.950(n=160)  m4=0.869(n=160)  m1_chrono=0.994(n=160)  m4_chrono=0.994(n=160)
+      b_reversed vs b: RD=-0.025 disc=2/6 p=2.89e-01
+      m1_chrono vs b: RD=+0.312 disc=51/1 p=2.35e-14
+      m1_chrono vs m1: RD=+0.044 disc=8/1 p=3.91e-02
+      m1 vs b: RD=+0.269 disc=51/8 p=9.05e-09
+      m4_chrono vs m4: RD=+0.125 disc=21/1 p=1.10e-05
+  d>= 80  b=0.452(n=93)  m1=0.968(n=93)  m2=0.957(n=93)  m4=0.903(n=93)  m1_chrono=0.989(n=93)  m4_chrono=0.989(n=93)
+      b_reversed vs b: RD=+0.011 disc=2/1 p=1.00e+00
+      m1_chrono vs b: RD=+0.538 disc=51/1 p=2.35e-14
+      m1_chrono vs m1: RD=+0.022 disc=3/1 p=6.25e-01
+      m1 vs b: RD=+0.516 disc=51/3 p=2.92e-12
+      m4_chrono vs m4: RD=+0.086 disc=9/1 p=2.15e-02
+
+=== 5. Logistic regression, Mode B (cluster-robust by seed x episode) ===
+  Intercept                                     +0.310 p=0.2936 [-0.268,+0.887]
+  C(condition, Treatment(reference='b'))[T.m1]  +0.564 p=0.0188 [+0.094,+1.035]
+  C(condition, Treatment(reference='b'))[T.m2]  +1.298 p=0.0000 [+0.685,+1.911]
+  C(condition, Treatment(reference='b'))[T.m3]  +0.049 p=0.8239 [-0.384,+0.483]
+  C(condition, Treatment(reference='b'))[T.m4]  -0.024 p=0.9162 [-0.474,+0.426]
+  C(condition, Treatment(reference='b'))[T.b_reversed] -0.563 p=0.0000 [-0.793,-0.333]
+  C(condition, Treatment(reference='b'))[T.m1_chrono] +2.518 p=0.0000 [+1.666,+3.370]
+  C(condition, Treatment(reference='b'))[T.m3_chrono] -0.024 p=0.9162 [-0.474,+0.426]
+  C(condition, Treatment(reference='b'))[T.m4_chrono] +2.518 p=0.0000 [+1.666,+3.370]
+  dist                                          +0.011 p=0.0038 [+0.003,+0.018]
+  McFadden pseudo-R2 = 0.110; n = 1971
+
+=== 6a. Mode B failure tags ===
+  b            retrieval_miss=0.233  stale_fact=0.023  success=0.744
+  m1           stale_fact=0.164  success=0.836
+  m2           reasoning_failure=0.032  stale_fact=0.055  success=0.913
+  m3           reasoning_failure=0.132  stale_fact=0.114  success=0.753
+  m4           reasoning_failure=0.032  stale_fact=0.228  success=0.740
+  b_reversed   retrieval_miss=0.224  stale_fact=0.151  success=0.626
+  m1_chrono    stale_fact=0.027  success=0.973
+  m3_chrono    reasoning_failure=0.137  stale_fact=0.123  success=0.740
+  m4_chrono    stale_fact=0.027  success=0.973
+
+=== 6b. Mode A failure tags ===
+  b    partial_retrieval=0.006  reasoning_failure=0.047  retrieval_miss=0.908  success=0.039
+  m1   partial_retrieval=0.103  reasoning_failure=0.328  retrieval_miss=0.161  success=0.408
+  m2   reasoning_failure=0.958  success=0.042
+  m3   partial_retrieval=0.153  reasoning_failure=0.483  retrieval_miss=0.147  success=0.217
+  m4   partial_retrieval=0.142  reasoning_failure=0.089  retrieval_miss=0.533  success=0.236
+
+=== 6c. Mode A per-ability success ===
+  single-session-user           b=0.000(n=60)  m1=0.833(n=60)  m2=0.017(n=60)  m3=0.317(n=60)  m4=0.300(n=60)
+  single-session-assistant      b=0.000(n=60)  m1=0.633(n=60)  m2=0.000(n=60)  m3=0.500(n=60)  m4=0.267(n=60)
+  knowledge-update              b=0.067(n=60)  m1=0.433(n=60)  m2=0.033(n=60)  m3=0.133(n=60)  m4=0.600(n=60)
+  multi-session                 b=0.000(n=60)  m1=0.350(n=60)  m2=0.017(n=60)  m3=0.167(n=60)  m4=0.033(n=60)
+  temporal-reasoning            b=0.167(n=60)  m1=0.200(n=60)  m2=0.183(n=60)  m3=0.183(n=60)  m4=0.217(n=60)
+  single-session-preference     b=0.000(n=60)  m1=0.000(n=60)  m2=0.000(n=60)  m3=0.000(n=60)  m4=0.000(n=60)
+
+=== 6d. Cost, Mode B (metered totals) ===
+  b            answ=1123.9 total=1130.8 calls=1.00 answ_vs_b=-0.0% total_vs_b=+0.0%
+  m1           answ=1125.7 total=1131.4 calls=1.00 answ_vs_b=+0.2% total_vs_b=+0.0%
+  m2           answ=991.4 total=1311.1 calls=1.27 answ_vs_b=-11.8% total_vs_b=+15.9%
+  m3           answ=616.7 total=1192.6 calls=4.58 answ_vs_b=-45.1% total_vs_b=+5.5%
+  m4           answ=1125.8 total=1132.7 calls=1.00 answ_vs_b=+0.2% total_vs_b=+0.2%
+  b_reversed   answ=1123.9 total=1131.7 calls=1.00 answ_vs_b=-0.0% total_vs_b=+0.1%
+  m1_chrono    answ=1125.7 total=1131.4 calls=1.00 answ_vs_b=+0.2% total_vs_b=+0.0%
+  m3_chrono    answ=616.7 total=1192.2 calls=4.58 answ_vs_b=-45.1% total_vs_b=+5.4%
+  m4_chrono    answ=1125.8 total=1131.6 calls=1.00 answ_vs_b=+0.2% total_vs_b=+0.1%
+  per-seed m3 total vs b:
+    seed1: +2.2%
+    seed2: +8.4%
+    seed3: +5.8%
+
+=== 6e. Cost, Mode A (instrumented records only) ===
+  b    n=121 succ=0.041 answ=1253 total=1,283.5 calls=1.0 x_base=1.00
+  m1   n=240 succ=0.396 answ=1251 total=1,278.9 calls=1.0 x_base=1.00
+  m2   n=360 succ=0.042 answ=1025 total=316,111.7 calls=240.2 x_base=246.29
+  m3   n=360 succ=0.217 answ=1196 total=163,766.4 calls=185.5 x_base=127.59
+  m4   n=360 succ=0.236 answ=1251 total=1,275.6 calls=1.0 x_base=0.99
+
+=== 6f. Seed spreads ===
+  Mode B b            seeds=[np.float64(0.73), np.float64(0.76), np.float64(0.743)] spread=0.030
+  Mode B m1           seeds=[np.float64(0.851), np.float64(0.747), np.float64(0.914)] spread=0.168
+  Mode B m2           seeds=[np.float64(0.919), np.float64(0.88), np.float64(0.943)] spread=0.063
+  Mode B m3           seeds=[np.float64(0.757), np.float64(0.787), np.float64(0.714)] spread=0.072
+  Mode B m4           seeds=[np.float64(0.784), np.float64(0.653), np.float64(0.786)] spread=0.132
+  Mode B b_reversed   seeds=[np.float64(0.649), np.float64(0.56), np.float64(0.671)] spread=0.111
+  Mode B m1_chrono    seeds=[np.float64(0.946), np.float64(0.987), np.float64(0.986)] spread=0.041
+  Mode B m3_chrono    seeds=[np.float64(0.73), np.float64(0.773), np.float64(0.714)] spread=0.059
+  Mode B m4_chrono    seeds=[np.float64(0.946), np.float64(0.987), np.float64(0.986)] spread=0.041
+  Mode A b            seeds=[np.float64(0.05), np.float64(0.025), np.float64(0.042)] spread=0.025
+  Mode A m1           seeds=[np.float64(0.392), np.float64(0.433), np.float64(0.4)] spread=0.042
+  Mode A m2           seeds=[np.float64(0.05), np.float64(0.033), np.float64(0.042)] spread=0.017
+  Mode A m3           seeds=[np.float64(0.208), np.float64(0.208), np.float64(0.233)] spread=0.025
+  Mode A m4           seeds=[np.float64(0.233), np.float64(0.233), np.float64(0.242)] spread=0.008
+
+=== 6g. Baseline read coverage (Mode B) ===
+  n_retrieved mean=88.9; memory_items mean=96.5 (minus current query turn = 95.5)

@@ -1,0 +1,21 @@
+{
+  "file": "results/rerun_2026_07_29/custom_ds_merged.jsonl",
+  "paired_items": 219,
+  "b": {
+    "n": 219,
+    "success": 163,
+    "rate": 0.7442922374429224
+  },
+  "b_reversed": {
+    "n": 219,
+    "success": 137,
+    "rate": 0.6255707762557078
+  },
+  "ordering_effect_pp": 11.87214611872146,
+  "mcnemar": {
+    "b_only": 28,
+    "brev_only": 2,
+    "p_exact": 8.67992639541626e-07,
+    "chi2_cc": 20.833333333333332
+  }
+}

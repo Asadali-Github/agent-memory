@@ -1,0 +1,15 @@
+# m3_chrono — MITIGATION ARM for the semantic fact store. See m1_chrono.yaml.
+# Identical to m3 except that the selected facts are re-sorted oldest-first
+# (by earliest source step) before filling the prompt slot
+# (retrieval.reorder_chronologically).
+#
+# Selection, token count and read budget are unchanged, so m3 vs m3_chrono is a
+# single-factor manipulation of layout for the fact-store architecture. Result
+# (HPC job 2848922): success did NOT recover (0.753 -> 0.740, n.s.) — M3's
+# ordering damage is incurred at extraction (write) time, not read time. See
+# supervision/ADDENDUM_m3_chrono_2026-07-30.md.
+condition: m3_chrono
+params:
+  retriever: tfidf
+  extract_every: 5               # turns per extraction batch (1 overhead call each)
+  chronological_order: true

@@ -1,0 +1,22 @@
+# M2 — Hierarchical summary (MemGPT-style). Overhead LLM calls charged to condition.
+#
+# THRESHOLD RATIONALE (record this in Ch3 alongside DP1):
+# The fold threshold must sit BELOW the shared read budget, otherwise the
+# summariser can only fire on histories the baseline could not have read
+# anyway, and the condition silently degenerates to the baseline.
+# Sweep REGENERATED 3 Aug 2026 against the canonical post-fix n=219 panel
+# (results/rerun_2026_07_29/custom_ds_merged.jsonl, condition 'b',
+# memory_written_tokens). The figures below previously cited the superseded
+# 258-item pre-provenance-fix panel AND misreported the 1200 row as 0/258.
+# Mode B histories on the canonical panel: min 872, median 1168, mean 1170,
+# max 1453 tokens.
+#   1500 -> fires on   0/219 items (0%)    <- the broken pilot setting: above
+#                                             every history in the panel
+#   1200 -> fires on  92/219 items (42%)   selective => M2 becomes a mixture
+#   1000 -> fires on 185/219 items (84%)   selective => M2 becomes a mixture
+#    800 -> fires on 219/219 items (100%)  <- chosen: fires on every item,
+#                                             still well below the 1200 budget
+condition: m2
+params:
+  buffer_token_threshold: 800    # fold oldest raw turns into summary above this
+  fold_fraction: 0.5             # fraction of buffer folded per summarisation

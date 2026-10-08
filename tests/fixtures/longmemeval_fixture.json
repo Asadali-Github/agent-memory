@@ -1,0 +1,758 @@
+[
+ {
+  "question_id": "fx_single-session-user_0",
+  "question_type": "single-session-user",
+  "question": "What is the name of my pet?",
+  "answer": "Biscuit",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/05/10 (Wed) 18:30",
+   "2023/04/01 (Mon) 10:00",
+   "2023/06/25 (Sun) 12:00"
+  ],
+  "haystack_session_ids": [
+   "s1_2",
+   "s1_1",
+   "s1_9"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "I just adopted a beagle called Biscuit last weekend!",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Congratulations! How is the settling-in going?",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s1_2"
+  ]
+ },
+ {
+  "question_id": "fx_single-session-user_1",
+  "question_type": "single-session-user",
+  "question": "What is the name of my pet?",
+  "answer": "Biscuit",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/05/10 (Wed) 18:30",
+   "2023/04/02 (Mon) 10:00",
+   "2023/06/25 (Sun) 12:00"
+  ],
+  "haystack_session_ids": [
+   "s2_2",
+   "s2_1",
+   "s2_9"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "I just adopted a beagle called Biscuit last weekend!",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Congratulations! How is the settling-in going?",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s2_2"
+  ]
+ },
+ {
+  "question_id": "fx_single-session-assistant_0",
+  "question_type": "single-session-assistant",
+  "question": "Which statistics book did you recommend to me?",
+  "answer": "The Art of Statistics",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/04/01 (Mon) 10:00",
+   "2023/06/25 (Sun) 12:00",
+   "2023/05/12 (Fri) 09:00"
+  ],
+  "haystack_session_ids": [
+   "s3_1",
+   "s3_9",
+   "s3_2"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Any book to learn statistics gently?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "I recommend 'The Art of Statistics' by David Spiegelhalter.",
+     "has_answer": true
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s3_2"
+  ]
+ },
+ {
+  "question_id": "fx_single-session-assistant_1",
+  "question_type": "single-session-assistant",
+  "question": "Which statistics book did you recommend to me?",
+  "answer": "The Art of Statistics",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/04/02 (Mon) 10:00",
+   "2023/05/12 (Fri) 09:00",
+   "2023/06/25 (Sun) 12:00"
+  ],
+  "haystack_session_ids": [
+   "s4_1",
+   "s4_2",
+   "s4_9"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Any book to learn statistics gently?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "I recommend 'The Art of Statistics' by David Spiegelhalter.",
+     "has_answer": true
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s4_2"
+  ]
+ },
+ {
+  "question_id": "fx_single-session-preference_0",
+  "question_type": "single-session-preference",
+  "question": "When planning travel for me, which transport should you prioritise?",
+  "answer": "trains",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/05/14 (Sun) 20:15",
+   "2023/04/01 (Mon) 10:00",
+   "2023/06/25 (Sun) 12:00"
+  ],
+  "haystack_session_ids": [
+   "s5_2",
+   "s5_1",
+   "s5_9"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "For future itineraries: I strongly prefer trains over flights.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Noted - trains over flights whenever feasible.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s5_2"
+  ]
+ },
+ {
+  "question_id": "fx_single-session-preference_1",
+  "question_type": "single-session-preference",
+  "question": "When planning travel for me, which transport should you prioritise?",
+  "answer": "trains",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/05/14 (Sun) 20:15",
+   "2023/06/25 (Sun) 12:00",
+   "2023/04/02 (Mon) 10:00"
+  ],
+  "haystack_session_ids": [
+   "s6_2",
+   "s6_9",
+   "s6_1"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "For future itineraries: I strongly prefer trains over flights.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Noted - trains over flights whenever feasible.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s6_2"
+  ]
+ },
+ {
+  "question_id": "fx_multi-session_0",
+  "question_type": "multi-session",
+  "question": "Which city am I visiting on my summer trip?",
+  "answer": "Prague",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/06/25 (Sun) 12:00",
+   "2023/05/03 (Wed) 11:00",
+   "2023/06/20 (Tue) 15:45",
+   "2023/04/01 (Mon) 10:00"
+  ],
+  "haystack_session_ids": [
+   "s7_9",
+   "s7_2",
+   "s7_3",
+   "s7_1"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Booked my summer trip to Prague!",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Lovely choice.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "The trip is in exactly three weeks now.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Exciting - three weeks to go.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s7_2",
+   "s7_3"
+  ]
+ },
+ {
+  "question_id": "fx_multi-session_1",
+  "question_type": "multi-session",
+  "question": "Which city am I visiting on my summer trip?",
+  "answer": "Oslo",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/05/03 (Wed) 11:00",
+   "2023/06/25 (Sun) 12:00",
+   "2023/04/02 (Mon) 10:00",
+   "2023/06/20 (Tue) 15:45"
+  ],
+  "haystack_session_ids": [
+   "s8_2",
+   "s8_9",
+   "s8_1",
+   "s8_3"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "Booked my summer trip to Oslo!",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Lovely choice.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "The trip is in exactly three weeks now.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Exciting - three weeks to go.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s8_2",
+   "s8_3"
+  ]
+ },
+ {
+  "question_id": "fx_temporal-reasoning_0",
+  "question_type": "temporal-reasoning",
+  "question": "In which month did I start my gym membership?",
+  "answer": "May",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/04/01 (Mon) 10:00",
+   "2023/05/05 (Fri) 13:20",
+   "2023/06/25 (Sun) 12:00"
+  ],
+  "haystack_session_ids": [
+   "s9_1",
+   "s9_2",
+   "s9_9"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "I started my new gym membership on 1 May 2023.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Good luck with the training!",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s9_2"
+  ]
+ },
+ {
+  "question_id": "fx_temporal-reasoning_1",
+  "question_type": "temporal-reasoning",
+  "question": "In which month did I start my gym membership?",
+  "answer": "May",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/04/02 (Mon) 10:00",
+   "2023/06/25 (Sun) 12:00",
+   "2023/05/05 (Fri) 13:20"
+  ],
+  "haystack_session_ids": [
+   "s10_1",
+   "s10_9",
+   "s10_2"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "I started my new gym membership on 1 May 2023.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Good luck with the training!",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s10_2"
+  ]
+ },
+ {
+  "question_id": "fx_knowledge-update_0",
+  "question_type": "knowledge-update",
+  "question": "What is my current job?",
+  "answer": "data analyst",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/06/25 (Sun) 12:00",
+   "2023/04/20 (Thu) 10:10",
+   "2023/06/01 (Thu) 17:05",
+   "2023/04/01 (Mon) 10:00"
+  ],
+  "haystack_session_ids": [
+   "s11_9",
+   "s11_2",
+   "s11_3",
+   "s11_1"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "I work as a barista downtown.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Nice.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Big news - I quit and now work as a data analyst.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Congratulations on the new role!",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s11_2",
+   "s11_3"
+  ]
+ },
+ {
+  "question_id": "fx_knowledge-update_1",
+  "question_type": "knowledge-update",
+  "question": "What is my current job?",
+  "answer": "teacher",
+  "question_date": "2023/07/01 (Sat) 09:00",
+  "haystack_dates": [
+   "2023/04/20 (Thu) 10:10",
+   "2023/04/02 (Mon) 10:00",
+   "2023/06/25 (Sun) 12:00",
+   "2023/06/01 (Thu) 17:05"
+  ],
+  "haystack_session_ids": [
+   "s12_2",
+   "s12_1",
+   "s12_9",
+   "s12_3"
+  ],
+  "haystack_sessions": [
+   [
+    {
+     "role": "user",
+     "content": "I work as a barista downtown.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Nice.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Can you recommend a quick pasta recipe?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Sure - aglio e olio takes 15 minutes.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "What's a good stretch for lower-back pain?",
+     "has_answer": false
+    },
+    {
+     "role": "assistant",
+     "content": "Try the knee-to-chest stretch, gently.",
+     "has_answer": false
+    }
+   ],
+   [
+    {
+     "role": "user",
+     "content": "Big news - I quit and now work as a teacher.",
+     "has_answer": true
+    },
+    {
+     "role": "assistant",
+     "content": "Congratulations on the new role!",
+     "has_answer": false
+    }
+   ]
+  ],
+  "answer_session_ids": [
+   "s12_2",
+   "s12_3"
+  ]
+ }
+]
